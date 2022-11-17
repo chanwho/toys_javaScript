@@ -72,12 +72,12 @@ let printFunction = (qaToArray, chosen_answer) => {
       ans = "";
       console.log(`답 : (${chosen_answer[j]})\n`);
     } else if (j == 2) {
-      for (let i = 0; i < 5; i++) {
-        ans += `(${i + 1})${qaToArray[1][i].example} `;
-      }
-      console.log(ans);
+      answer_Array.forEach(
+        (elements, index) =>
+          (ans += "(" + (index + 1).toString() + ")" + elements.example + " ")
+      );
+      console.log(`${ans}\n`);
       ans = "";
-      console.log(`답 : (${chosen_answer[j]})\n`);
     } else if (j == 3) {
       for (let i = 0; i < 3; i++) {
         ans += `(${i + 1})${qaToArray[1][i].example} `;
