@@ -72,7 +72,7 @@ let printFunction = (qaToArray, chosen_answer) => {
       ans = "";
       console.log(`답 : (${chosen_answer[j]})\n`);
     } else if (j == 2) {
-      answer_Array.forEach(
+      qaToArray[1].forEach(
         (elements, index) =>
           (ans += "(" + (index + 1).toString() + ")" + elements.example + " ")
       );
